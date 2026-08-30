@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+
+{% block title %}Home | Obstacle Avoiding Bot.MIS{% endblock %}
+
+{% block content %}
+
+<!-- Floating Branding Tag - Top Right Corner -->
+<div class="floating-brand-tag" id="floatingBrandTag">{{ brand_tag }}</div>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content reveal">
+        <p class="hero-eyebrow">// Autonomous Navigation System</p>
+        <h1>Welcome to the Official Project Showcase of <span>Obstacle Avoiding Bot.MIS</span>!</h1>
+
+        <div class="hero-greeting">
+            <p>
+                A warm, hearty, and respectful welcome to our honorable teachers, respected evaluators, and
+                all our dear fellow students. This platform has been specially designed to showcase our
+                engineering project, which reflects our dedication, technical research, and passion for the
+                vast world of robotics. We are incredibly grateful to our institution and mentors for
+                providing the constant guidance that inspired us to turn a conceptual idea into a living,
+                moving reality.
+            </p>
+        </div>
+
+        <div class="hero-buttons">
+            <a href="{{ url_for('about') }}" class="btn btn-primary">Explore The Project</a>
+            <a href="{{ url_for('components') }}" class="btn btn-outline">View Circuit &amp; Code</a>
+        </div>
+    </div>
+
+    <div class="hero-image-wrapper reveal">
+        <img src="{{ url_for('static', filename='Images/bot_main.jpeg') }}" alt="Obstacle Avoiding Robot Showcase" class="bot-image">
+    </div>
+</section>
+
+<!-- What We Have Built Section -->
+<section class="section">
+    <div class="container">
+        <div class="section-heading">
+            <span class="section-label">// Project Introduction</span>
+            <h2>What We Have Built</h2>
+        </div>
+        <div class="content-block reveal">
+            <p>
+                Under this academic showcase, we have designed, programmed, and engineered an autonomous
+                vehicle named <strong>"Obstacle Avoiding Bot.MIS"</strong> using the Arduino UNO
+                microcontroller ecosystem.
+            </p>
+            <p>
+                Unlike basic remote-controlled toys or Bluetooth-driven cars, this robot is
+                <strong>100% autonomous</strong>. Once you switch it on, it requires no human intervention,
+                pre-defined tracks, or smartphone applications to find its way. It possesses its own digital
+                "brain" to process data and make instantaneous navigation decisions. The robot continuously
+                scans the physical environment ahead of it, intelligently detects any barriers—such as
+                walls, human footsteps, or random obstacles—and automatically alters its path to navigate
+                safely without colliding.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Why We Built This Section -->
+<section class="section why-section">
+    <div class="container">
+        <div class="section-heading">
+            <span class="section-label">// Our Vision</span>
+            <h2>Why We Built This Project &amp; Website</h2>
+        </div>
+        <p class="section-intro reveal">
+            We set out to develop this robotics project and documentation website with three primary
+            learning goals in mind:
+        </p>
+
+        <div class="cards-grid three">
+            <div class="feature-card reveal">
+                <div class="feature-number">01</div>
+                <h3>Bridging Theory and Practical Execution</h3>
+                <p>
+                    In our regular classes, we study programming languages, electronic physics, and
+                    algorithms purely on paper. Building this robot allowed us to experience firsthand how
+                    software lines of code can directly command and manipulate physical hardware devices.
+                </p>
+            </div>
+            <div class="feature-card reveal">
+                <div class="feature-number">02</div>
+                <h3>Understanding Modern Automation</h3>
+                <p>
+                    The modern industrial world is rapidly shifting toward smart autonomous systems—ranging
+                    from Tesla's self-driving cars to automated factory drones. Our project serves as a
+                    foundational prototype of that very same sensor-guided technology, helping us prepare
+                    for future engineering landscapes.
+                </p>
+            </div>
+            <div class="feature-card reveal">
+                <div class="feature-number">03</div>
+                <h3>Creating an Open-Source Learning Hub</h3>
+                <p>
+                    True knowledge expands when shared. We designed this comprehensive website so that our
+                    classmates and juniors can study robotics without feeling overwhelmed. By detailing our
+                    parts list, logic structure, and circuit schematics here, we hope to empower other
+                    students to build their own custom robots affordably.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="container cta-content reveal">
+        <h2>Ready To See How It Works?</h2>
+        <p>Dive into the full architecture, bill of materials, and circuit-level breakdown of the bot.</p>
+        <a href="{{ url_for('about') }}" class="btn btn-primary">Go To About The Project</a>
+    </div>
+</section>
+
+{% endblock %}

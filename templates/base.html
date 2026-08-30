@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Obstacle Avoiding Bot.MIS{% endblock %}</title>
+    <meta name="description" content="Official Project Showcase of Obstacle Avoiding Bot.MIS - an autonomous Arduino UNO robot.">
+    <meta name="author" content="{{ brand_tag }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800;900&family=Share+Tech+Mono&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <!-- Circuit Grid Background Overlay -->
+    <div class="grid-overlay"></div>
+
+    <!-- Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="{{ url_for('home') }}" class="logo">
+                <span class="logo-bracket">&lt;</span>Bot<span class="logo-highlight">.MIS</span><span class="logo-bracket">/&gt;</span>
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="{{ url_for('home') }}" class="{{ 'active' if active_page == 'home' }}">Home</a>
+                <a href="{{ url_for('about') }}" class="{{ 'active' if active_page == 'about' }}">About The Project</a>
+                <a href="{{ url_for('components') }}" class="{{ 'active' if active_page == 'components' }}">Components &amp; Coding</a>
+                <a href="{{ url_for('preface') }}" class="{{ 'active' if active_page == 'preface' }}">Preface</a>
+                <a href="{{ url_for('creds') }}" class="{{ 'active' if active_page == 'creds' }}">Creds</a>
+            </nav>
+
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Page Content -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3 class="footer-logo"><span class="logo-bracket">&lt;</span>Bot<span class="logo-highlight">.MIS</span><span class="logo-bracket">/&gt;</span></h3>
+                <p>An autonomous obstacle avoiding robot built on the Arduino UNO platform, engineered as an academic showcase of sensor-guided navigation and embedded systems.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Site Map</h4>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('about') }}">About The Project</a></li>
+                    <li><a href="{{ url_for('components') }}">Components &amp; Coding</a></li>
+                    <li><a href="{{ url_for('preface') }}">Preface</a></li>
+                    <li><a href="{{ url_for('creds') }}">Creds</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Project Identity</h4>
+                <p class="brand-footer-tag">{{ brand_tag }}</p>
+                <p class="footer-note">Project Name: <strong>Roht Wheeler</strong></p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> {{ site_name }} — Built by Team Roht Wheeler.</p>
+        </div>
+    </footer>
+
+    <button id="scrollTopBtn" aria-label="Scroll to top">↑</button>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

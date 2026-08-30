@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+
+{% block title %}Components and Coding | Obstacle Avoiding Bot.MIS{% endblock %}
+
+{% block content %}
+
+<section class="page-banner">
+    <div class="page-banner-content reveal">
+        <span class="section-label">// Electronics Schematic &amp; Core Software Logic</span>
+        <h1>Components and Coding on it</h1>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container two-col reverse">
+        <div class="intro-image reveal">
+            <img src="{{ url_for('static', filename='Images/circuit_diagram.jpeg') }}" alt="Robot Connections Circuit Diagram" class="bot-image">
+        </div>
+
+        <div class="intro-text reveal">
+            <span class="section-label">// Section 1</span>
+            <h2>Hardware Interconnections (How Every Component is Connected)</h2>
+            <p>
+                To successfully bring the Obstacle Avoiding Bot.MIS to life, physical wiring must perfectly
+                align with embedded hardware interfaces.
+            </p>
+
+            <ul class="tech-list">
+                <li>
+                    <strong>The Sensor Circuitry:</strong> The HC-SR04 Ultrasonic Sensor requires a steady
+                    5V power supply from the Arduino rail. Its Trigger and Echo pins are routed to analog
+                    interfaces A0 and A1 to ensure real-time distance polling without lag.
+                </li>
+                <li>
+                    <strong>The Servo Mechanism:</strong> The SG90 micro servo, which swivels our ultrasonic
+                    radar, has its signal line mapped directly to digital PWM pin 10 for high-precision
+                    angular movements.
+                </li>
+                <li>
+                    <strong>The Propulsion Core:</strong> The L298N H-Bridge Motor Driver acts as the
+                    high-current muscles of the robot. Its directional input pins (IN1, IN2, IN3, IN4) are
+                    safely connected to Arduino digital pins 4, 5, 6, and 7 to execute clean forward,
+                    reverse, and spot-turning commands.
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section pinmap-section">
+    <div class="container">
+        <div class="section-heading center">
+            <span class="section-label">// Quick Reference</span>
+            <h2>Pin Mapping Summary</h2>
+        </div>
+
+        <div class="table-wrapper reveal">
+            <table class="bom-table">
+                <thead>
+                    <tr>
+                        <th>Component</th>
+                        <th>Pin / Signal</th>
+                        <th>Arduino UNO Pin</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HC-SR04 Ultrasonic Sensor</td>
+                        <td>Trigger</td>
+                        <td>A0</td>
+                    </tr>
+                    <tr>
+                        <td>HC-SR04 Ultrasonic Sensor</td>
+                        <td>Echo</td>
+                        <td>A1</td>
+                    </tr>
+                    <tr>
+                        <td>SG90 Micro Servo</td>
+                        <td>Signal (PWM)</td>
+                        <td>Digital Pin 10</td>
+                    </tr>
+                    <tr>
+                        <td>L298N Motor Driver</td>
+                        <td>IN1</td>
+                        <td>Digital Pin 4</td>
+                    </tr>
+                    <tr>
+                        <td>L298N Motor Driver</td>
+                        <td>IN2</td>
+                        <td>Digital Pin 5</td>
+                    </tr>
+                    <tr>
+                        <td>L298N Motor Driver</td>
+                        <td>IN3</td>
+                        <td>Digital Pin 6</td>
+                    </tr>
+                    <tr>
+                        <td>L298N Motor Driver</td>
+                        <td>IN4</td>
+                        <td>Digital Pin 7</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
