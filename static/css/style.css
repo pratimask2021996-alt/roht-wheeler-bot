@@ -910,3 +910,23 @@ ul {
 
 /* Credits Section */
 .credits-section-wrap { background: var(--color-bg-2); }
+.credit-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+  margin-top: auto;
+}
+
+.credit-text {
+  color: #39FF14 !important;
+  font-size: 26px !important;
+  font-weight: 800 !important;
+  font-family: 'Arial', sans-serif !important;
+  text-align: center !important;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14, 0 0 30px #39FF14 !important;
+  margin: 0 !important;
+}
