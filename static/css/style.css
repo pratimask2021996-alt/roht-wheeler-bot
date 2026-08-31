@@ -912,21 +912,19 @@ ul {
 .credits-section-wrap { background: var(--color-bg-2); }
 .credit-container {
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
   padding: 30px 0;
-  margin-top: auto;
+  margin-top: 20px;
 }
 
 .credit-text {
-  color: #39FF14 !important;
-  font-size: 26px !important;
-  font-weight: 800 !important;
-  font-family: 'Arial', sans-serif !important;
-  text-align: center !important;
+  color: #39FF14;
+  font-size: 28px;
+  font-weight: 900;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
   text-transform: uppercase;
   letter-spacing: 2px;
-  text-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14, 0 0 30px #39FF14 !important;
-  margin: 0 !important;
+  text-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14, 0 0 30px #39FF14;
+  margin: 0;
 }
