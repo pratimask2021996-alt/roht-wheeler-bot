@@ -1,48 +1,58 @@
 {% extends "base.html" %}
 
-{% block title %}Creds | Obstacle Avoiding Bot.MIS{% endblock %}
+{% block title %}Creds &amp; Mentorship | Obstacle Avoiding Bot.MIS{% endblock %}
 
 {% block content %}
 
 <section class="page-banner">
     <div class="page-banner-content reveal">
         <span class="section-label">// The Team Behind Roht Wheeler</span>
-        <h1>Creds</h1>
+        <h1>Creds &amp; Mentorship</h1>
     </div>
 </section>
 
-<!-- Section 1: Project Members -->
-<section class="section">
+<!-- Section 1: Project Members (Top) -->
+<section class="section members-section-wrap">
     <div class="container">
         <div class="section-heading center">
-            <span class="section-label">// Section 1</span>
+            <span class="section-label">// Development Team</span>
             <h2>Project Members</h2>
+            <p>The student engineering team responsible for hardware assembly, testing, and web showcase development.</p>
         </div>
 
         <div class="members-grid">
             <div class="member-card reveal">
                 <img src="{{ url_for('static', filename='Images/member1.jpg') }}" alt="Harsh" class="member-photo">
                 <p class="member-name">Harsh</p>
+                <span class="member-role">Team Member</span>
             </div>
             <div class="member-card reveal">
                 <img src="{{ url_for('static', filename='Images/member2.jpg') }}" alt="Nayan" class="member-photo">
                 <p class="member-name">Nayan</p>
+                <span class="member-role">Team Member</span>
             </div>
             <div class="member-card reveal">
                 <img src="{{ url_for('static', filename='Images/member3.jpg') }}" alt="Sreyash" class="member-photo">
                 <p class="member-name">Sreyash</p>
+                <span class="member-role">Team Member</span>
             </div>
             <div class="member-card reveal">
                 <img src="{{ url_for('static', filename='Images/member4.jpg') }}" alt="Aditya" class="member-photo">
                 <p class="member-name">Aditya</p>
+                <span class="member-role">Team Member</span>
             </div>
             <div class="member-card reveal">
                 <img src="{{ url_for('static', filename='Images/member5.jpg') }}" alt="Aditya 2" class="member-photo">
                 <p class="member-name">Aditya 2</p>
+                <span class="member-role">Team Member</span>
             </div>
             <div class="member-card reveal">
-                <img src="{{ url_for('static', filename='Images/member6.jpg') }}" alt="Sudhanshu" class="member-photo">
-                <p class="member-name">Sudhanshu</p>
+                <div class="member-avatar-box">
+    <span class="avatar-letter">AR</span>
+    <span class="avatar-sub">Arnav</span>
+</div>
+                <p class="member-name">Arnav</p>
+                <span class="member-role">Team Member</span>
             </div>
         </div>
     </div>
@@ -55,7 +65,7 @@
             <h2>Special Credit Goes To</h2>
             <p class="credits-subtext">
                 We extend our sincere and special gratitude to the following core contributors for their
-                exceptional support:
+                exceptional dedication and leadership:
             </p>
 
             <div class="admin-list">
@@ -67,7 +77,75 @@
     </div>
 </section>
 
-<!-- Section 3: Created By -->
+<!-- Section 3: Institutional Guidance & Patrons (Director & Mentor) -->
+<section class="section leadership-section-wrap">
+    <div class="container">
+        <div class="section-heading center">
+            <span class="section-label">// Visionary Guidance &amp; Institutional Patronage</span>
+            <h2>Chief Patron &amp; Academic Guiders</h2>
+            <p>Under the exemplary leadership and research encouragement of Manas International School</p>
+        </div>
+
+        <!-- Official Executive Director Card -->
+        <div class="director-executive-card reveal">
+            <!-- 1. PHOTO (Top) -->
+            <div class="director-photo-container">
+                <div class="director-photo-ring">
+                    <img src="{{ url_for('static', filename='Images/director_sir.jpg') }}" alt="Raman Pradhan (Director Sir)" class="director-photo">
+                </div>
+                <div class="director-verified-badge">★ Chief Patron ★</div>
+            </div>
+
+            <!-- 2. NAME -->
+            <h2 class="director-name">Raman Pradhan <span class="director-bracket">(Director Sir)</span></h2>
+
+            <!-- 3. DESIGNATION -->
+            <p class="director-designation">Director of Manas International School</p>
+
+            <!-- 4. SLOGAN -->
+            <div class="director-slogan-wrapper">
+                <span class="slogan-decor">__</span>
+                <span class="director-slogan">“Knowledge Knows No Barrier”</span>
+                <span class="slogan-decor">__</span>
+                <span class="slogan-tagline">// Official Institutional Motto</span>
+            </div>
+
+            <div class="director-gold-divider"></div>
+
+            <!-- 5. EXECUTIVE SPEECH / MESSAGE -->
+            <div class="director-quote-box">
+                <div class="quote-symbol">“</div>
+                <p class="director-speech">
+                    True education flourishes when scientific curiosity meets fearless execution. Our students are the architects of tomorrow's technological landscape, and nurturing their innovative spirit in robotics and artificial intelligence remains our highest institutional commitment.
+                </p>
+                <div class="speech-footer">
+                    <span class="speech-underscore">_</span>
+                    <span class="speech-author">Raman Pradhan, Director</span>
+                    <span class="speech-underscore">_</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Technical Mentor Section (Ankit Sir) -->
+        <div class="mentor-single-wrap">
+            <div class="leader-card mentor-card reveal">
+                <div class="leader-badge mentor-badge">Project Mentor / Guide</div>
+                <div class="leader-img-wrapper">
+                    <img src="{{ url_for('static', filename='Images/guider1.jpg') }}" alt="Ankit Sir - Project Mentor" class="leader-photo">
+                </div>
+                <div class="leader-details">
+                    <h3 class="leader-title">Ankit Sir</h3>
+                    <p class="leader-designation">Faculty &amp; Technical Mentor</p>
+                    <div class="leader-divider"></div>
+                    <p class="leader-org">Department of Computer Science &amp; Robotics</p>
+                    <p class="leader-desc">Providing continuous technical guidance, circuit architecture validation, and software optimization.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 4: Created By -->
 <section class="section created-by-section">
     <div class="container">
         <div class="company-box reveal">
