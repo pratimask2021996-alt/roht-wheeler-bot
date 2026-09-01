@@ -929,3 +929,42 @@ ul {
   text-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14, 0 0 30px #39FF14;
   margin: 0;
 }
+/* 1. Sabhi images screen ke hisaab se auto-adjust hongi */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* 2. Mobile screen par overflow/text katne se rokne ke liye */
+body, html {
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* 3. Mobile screen (600px se chhoti) ke liye specific layout overrides */
+@media (max-width: 600px) {
+  /* Containers ko mobile padding dena */
+  .container, section, div {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Images jo tiny ho rahi hain unko standard mobile width dena */
+  .hero-img, .home-img, .project-img, img {
+    width: 100% !important;
+    max-width: 300px; /* Aap apne hisaab se adjust kar sakte hain */
+    margin: 0 auto;
+  }
+
+  /* Guider aur team members ki images ko proper size dena */
+  .guider-img, .credits-img, .member-img {
+    width: 120px !important;
+    height: 120px !important;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+}
