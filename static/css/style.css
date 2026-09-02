@@ -1170,3 +1170,21 @@ html, body {
     width: 100% !important;
   }
 }
+/* Special character wale ID/Tag ka overlap fix */
+[id*="infosolution"], [class*="infosolution"] {
+  position: static !important;
+  display: block !important;
+  width: fit-content !important;
+  max-width: 100% !important;
+  margin: 10px 0 !important;
+  font-size: 0.75rem !important;
+  white-space: normal !important;
+  word-break: break-all !important;
+}
+
+/* Header Title Fix - Bot.MIS ko hamesha upar aur visible rakhne ke liye */
+h1, h2, .main-title, .hero-title {
+  margin-top: 15px !important;
+  position: relative !important;
+  z-index: 5 !important;
+}
