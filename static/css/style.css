@@ -1055,3 +1055,44 @@ p, h1, h2, h3, h4, span, a {
   -webkit-overflow-scrolling: touch;
   width: 100%;
 }
+/* 1. Global Reset - Extra space aur horizontal scroll bilkul khatam */
+html, body {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important; /* Side mein faltu scroll nahi hone dega */
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box !important;
+}
+
+/* 2. Tiny Images Fix - Home Page aur Baki Photos ko Clean Size dena */
+img {
+  max-width: 100% !important;
+  width: auto !important;
+  min-width: 250px !important; /* Photo bindu jitni chhoti nahi hogi */
+  height: auto !important;
+  display: block !important;
+  margin: 15px auto !important; /* Photo screen ke center mein aayegi */
+  object-fit: contain !important;
+}
+
+/* 3. Sections & Tables Fix - Jahan text khatam, wahan box khatam */
+section, div, container, main, table, .credits-section, .preface-section {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important; /* Extra vertical space mita dega */
+  min-height: auto !important;
+  padding: 10px !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* 4. Text Wrapping - Screen se bahar text nahi bhagega */
+p, h1, h2, h3, h4, span, a, td, th {
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+  white-space: normal !important;
+}
