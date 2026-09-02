@@ -1,3 +1,19 @@
+/* --- Mobile Horizontal Scroll Fix --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+}
 /* ==========================================================================
    Obstacle Avoiding Bot.MIS — Global Stylesheet (Black & Neon-Green Theme)
    ========================================================================== */
