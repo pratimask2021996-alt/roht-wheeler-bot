@@ -1099,3 +1099,38 @@ p, h1, h2, h3, h4, span, a {
     margin: 0 auto !important;
   }
 }
+/* --- UNIVERSAL MOBILE & DESKTOP IMAGE FIX --- */
+
+/* 1. Images ko Bindu (Tiny) Hone Se Rokein */
+img, .hero-img, .home-img, .project-img {
+  width: 100% !important;
+  max-width: 320px !important; /* Standalone image readable size */
+  min-width: 200px !important; /* Bindu jitna chhota nahi hone dega */
+  height: auto !important;
+  display: block !important;
+  margin: 15px auto !important;
+  object-fit: contain !important;
+}
+
+/* 2. Portfolio/Home Layout - Horizontal Stretch Fix */
+.hero-section, .home-container, .grid-wrapper {
+  display: flex !important;
+  flex-direction: column !important; /* Mobile standard: Text upar, Image niche */
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+}
+
+/* 3. Screen Width Lock - Side Scroll Bilkul Khatam */
+html, body {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+}
+
+/* 4. Landscape / Horizontal Screen Support */
+@media (min-width: 768px) {
+  .hero-section, .home-container {
+    flex-direction: row !important; /* Screen badi hone par side-by-side */
+  }
+}
