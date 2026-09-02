@@ -999,3 +999,33 @@ body, html {
   height: auto;      /* Photo ka ratio kharab nahi hoga */
   display: block;
 }
+/* Mobile Screen Overflow Fix */
+@media (max-width: 768px) {
+  /* Screen ko flex rakhne ke liye taaki horizontal cut na ho */
+  html, body {
+    width: 100% !important;
+    overflow-x: auto !important; /* Scroll lock nahi hoga */
+  }
+
+  /* Header/Navbar responsive wrapper */
+  nav, .navbar, .header {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    height: auto !important;
+  }
+
+  /* Page Sections ko full container fit karne ke liye */
+  .section, main, container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 10px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Credits aur Preface jo rotate karne pe dikhte hain */
+  #credits, #preface, .credits-section, .preface-section {
+    display: block !important;
+    width: 100% !important;
+    clear: both !important;
+  }
+}
