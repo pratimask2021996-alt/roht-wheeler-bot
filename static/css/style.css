@@ -1055,44 +1055,47 @@ p, h1, h2, h3, h4, span, a {
   -webkit-overflow-scrolling: touch;
   width: 100%;
 }
-/* 1. Global Reset - Extra space aur horizontal scroll bilkul khatam */
-html, body {
+/* --- Desktop & Card Fixes (Laptop par cards aur photos normal size mein rahengi) --- */
+.member-card img, .guider-img, .credits-img {
   width: 100% !important;
-  max-width: 100% !important;
-  overflow-x: hidden !important; /* Side mein faltu scroll nahi hone dega */
-  margin: 0 !important;
-  padding: 0 !important;
+  min-width: auto !important; /* Fixed width issue solved */
+  height: 180px !important;    /* Sabhi cards ki photo ka uniform size */
+  object-fit: cover !important;
+  border-radius: 8px;
 }
 
-*, *::before, *::after {
-  box-sizing: border-box !important;
+/* Grid adjustment taaki cards stretch na hon */
+.members-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)) !important;
+  gap: 15px !important;
+  align-items: stretch !important;
 }
 
-/* 2. Tiny Images Fix - Home Page aur Baki Photos ko Clean Size dena */
-img {
-  max-width: 100% !important;
-  width: auto !important;
-  min-width: 250px !important; /* Photo bindu jitni chhoti nahi hogi */
+.member-card {
   height: auto !important;
-  display: block !important;
-  margin: 15px auto !important; /* Photo screen ke center mein aayegi */
-  object-fit: contain !important;
-}
-
-/* 3. Sections & Tables Fix - Jahan text khatam, wahan box khatam */
-section, div, container, main, table, .credits-section, .preface-section {
-  width: 100% !important;
-  max-width: 100% !important;
-  height: auto !important; /* Extra vertical space mita dega */
-  min-height: auto !important;
   padding: 10px !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
 }
 
-/* 4. Text Wrapping - Screen se bahar text nahi bhagega */
-p, h1, h2, h3, h4, span, a, td, th {
-  word-wrap: break-word !important;
-  overflow-wrap: break-word !important;
-  white-space: normal !important;
+/* Special Credits Text Size */
+.special-credits h2, .special-credits p {
+  font-size: 1.5rem !important;
+  font-weight: bold !important;
+  text-align: center !important;
+}
+
+/* --- Mobile Specific Fixes (Sirf Phone Screens par chalega) --- */
+@media (max-width: 768px) {
+  html, body {
+    width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  /* Phone par main home page images ke liye */
+  .hero-img, .home-img {
+    width: 100% !important;
+    max-width: 300px !important;
+    height: auto !important;
+    margin: 0 auto !important;
+  }
 }
