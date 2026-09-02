@@ -984,3 +984,18 @@ body, html {
     border-radius: 50%;
   }
 }
+/* Container jo image ko bilkul beech (center) mein layega */
+.img-box {
+  display: flex;
+  justify-content: center; /* Horizontally center karega */
+  align-items: center;     /* Vertically center karega */
+  width: 100%;             /* Poori screen width lega */
+  padding: 10px 0;
+}
+
+/* Image jo mobile ke hisaab se apne aap adjust hogi */
+.img-box img {
+  max-width: 100%;  /* Screen se bahar nahi jayegi */
+  height: auto;      /* Photo ka ratio kharab nahi hoga */
+  display: block;
+}
