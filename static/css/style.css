@@ -1188,3 +1188,46 @@ h1, h2, .main-title, .hero-title {
   position: relative !important;
   z-index: 5 !important;
 }
+/* Special Credits Section - Center Alignment */
+.special-credits {
+  text-align: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 20px 10px !important;
+  width: 100% !important;
+}
+
+/* Heading Styling */
+.special-credits h2 {
+  color: #ffffff;
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+}
+
+/* Names Container */
+.credits-names {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  gap: 15px !important;
+}
+
+/* Light Green Text + Sketch-Style Border Effect */
+.credits-names span, .special-credits p {
+  color: #88ffaa !important; /* Light Green Text */
+  font-weight: 500 !important; /* Halka/Medium Bold */
+  font-size: 1.2rem !important;
+  letter-spacing: 1px !important;
+  
+  /* Text Bordering (Sketch Outline Effect) */
+  -webkit-text-stroke: 1px #00ff66 !important; /* Main Neon Green Border */
+  text-shadow: 0 0 5px rgba(0, 255, 102, 0.4); /* Subtle Neon Glow */
+  
+  /* Optional: Box Border Style */
+  border: 1px solid #00ff66 !important;
+  padding: 6px 16px !important;
+  border-radius: 6px !important;
+  background: rgba(0, 255, 102, 0.05) !important;
+}
