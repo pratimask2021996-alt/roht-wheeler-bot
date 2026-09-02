@@ -1029,3 +1029,29 @@ body, html {
     clear: both !important;
   }
 }
+p, h1, h2, h3, h4, span, a {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+@media (max-width: 768px) {
+  /* Grid items ko 1 single column mein set karein */
+  .members-grid, .components-grid, .grid-container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+
+  /* Single card ki width mobile ke hisaab se fit karein */
+  .member-card, .component-card, .card {
+    width: 90% !important;
+    max-width: 350px !important;
+    margin: 10px 0 !important;
+  }
+}
+.table-wrapper, .wide-content {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+}
